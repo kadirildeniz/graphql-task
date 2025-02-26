@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { FaSort, FaSortUp, FaSortDown } from "react-icons/fa";
 
 interface Customer {
-  id: string; 
+  id: string;
   email: string;
   first_name: string;
   last_name: string;
@@ -38,6 +38,7 @@ export default function Home() {
     setSortOrder(newSortOrder);
 
     if (newSortOrder === null) {
+      // Orijinal sıralamaya dön
       fetch('/api/customers')
         .then(res => res.json())
         .then(data => setCustomers(data));
@@ -113,4 +114,4 @@ export default function Home() {
       </main>
     </div>
   );
-}
+} 

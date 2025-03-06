@@ -52,7 +52,7 @@ export default function Home() {
   };
 
   const getSortIcon = () => {
-    if (sortOrder === null) return <FaSort className="inline ml-2" />;
+    if (sortOrder === 'asc') return <FaSort className="inline ml-2" />;
     if (sortOrder === 'desc') return <FaSortDown className="inline ml-2" />;
     return <FaSortUp className="inline ml-2" />;
   };

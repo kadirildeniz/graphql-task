@@ -60,6 +60,7 @@ export async function GET() {
     }));
 
     return Response.json(customers);
+    
   } catch (error) {
     console.error('Shopify GraphQL Hatası:', error);
     return Response.json({ error: 'Müşteri listesi alınamadı' }, { status: 500 });
